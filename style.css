@@ -1,0 +1,185 @@
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Card */
+.card {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* Mode Buttons */
+.modes {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.mode {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #0f3460;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mode.active {
+  background: #e94560;
+  color: #fff;
+}
+
+/* Timer */
+.timer {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+/* Control Buttons */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.controls button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #e94560;
+  color: #fff;
+  font-weight: bold;
+}
+
+.controls button:last-child {
+  background: #0f3460;
+  color: #aaa;
+}
+
+.controls button:hover { opacity: 0.85; }
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #0f3460;
+  border-radius: 10px;
+  padding: 14px 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e94560;
+}
+
+.stat small {
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.music{
+    border-top:1px solid #0f3460;
+    padding-top: 16px;
+
+}
+
+.music p{
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 10px;
+    text-transform: uppercaseipSZA;
+    letter-spacing: 0.1em;
+
+}
+
+.music-row{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+music-row button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0f3460;
+  color: #eee;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.music-row button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.music-row button:not(:disabled):hover { background: #e94560; }
+
+#fileInput { display: none; }
+
+#trackName{
+    flex: 1;
+    font-size: 12px;
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hideen;
+    text-overflow: ellipsis;
+}
+
+.toast{
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background:#e94560 ;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.toast.show{
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

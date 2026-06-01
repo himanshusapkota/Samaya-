@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samaya||समय</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Samaya||समय⏰</h1>
+
+  <div class="card">
+
+   
+    <div class="modes">
+      <button id="focusBtn" class="mode active" onclick="switchMode('focus')">Focus 25m</button>
+      <button id="breakBtn" class="mode"        onclick="switchMode('break')">Break 5m</button>
+    </div>
+
+   
+    <div class="timer" id="timer">25:00</div>
+
+   
+    <div class="controls">
+      <button id="startBtn" onclick="startPause()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+
+ 
+    <div class="stats">
+      <div class="stat">
+        <span id="sessions">0</span>
+        <small>Sessions</small>
+      </div>
+      <div class="stat">
+        <span id="streak">0</span>
+        <small>Streak</small>
+      </div>
+      <div class="stat">
+        <span id="breaks">0</span>
+        <small>Breaks</small>
+      </div>
+    </div>
+
+    
+    <div class="music">
+      <p>🎵 Music</p>
+      <div class="music-row">
+        <button onclick="document.getElementById('fileInput').click()">Upload</button>
+        <input type="file" id="fileInput" accept="audio/*" onchange="loadTrack(event)" />
+        <span id="trackName">No file</span>
+        <button id="playBtn" onclick="toggleMusic()" disabled>▶</button>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
